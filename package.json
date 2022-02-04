@@ -1,0 +1,35 @@
+{
+  "name": "scrivejs",
+  "version": "2.35.9",
+  "description": "Typescript-wrapper for Scrive v2 API",
+  "keywords": [
+    "scrive",
+    "document-api",
+    "signing",
+    "document",
+    "rest-api"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": "github:cobraz/scrivejs",
+  "license": "Apache-2.0",
+  "author": "Simen A. W. Olsen <so@bjerk.io>",
+  "prettier": "@cobraz/prettier",
+  "eslintConfig": {
+    "extends": "@bjerk/eslint-config"
+  },
+  "devDependencies": {
+    "@bjerk/eslint-config": "^1.0.0",
+    "@cobraz/prettier": "^2.0.0",
+    "@tsconfig/recommended": "^1.0.1",
+    "eslint": "^8.7.0",
+    "jest": "^27.4.7",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "node-fetch": "^3.2.0",
+    "runtypes": "^6.5.0",
+    "typical-fetch": "^1.4.1"
+  }
+}
