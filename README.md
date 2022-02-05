@@ -7,6 +7,9 @@
 
 Use this to integrate with the [Scrive API][scrive-docs].
 
+**Note**: Don't expect full coverage for the API, as there is no code generating
+involved; we add features as we go. I would love contributions!
+
 [scrive-docs]: https://apidocs.scrive.com/
 
 ## Features
