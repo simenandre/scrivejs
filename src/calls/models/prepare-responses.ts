@@ -1,4 +1,5 @@
 import * as rt from 'runtypes';
+import { documentRt } from './document';
 
 /**
  * The new document response is intentially kept
@@ -8,13 +9,7 @@ import * as rt from 'runtypes';
  * https://apidocs.scrive.com/#document
  */
 
-export const newDocumentResponse = rt
-  .Record({
-    id: rt.String,
-    status: rt.Literal('preparation'),
-    title: rt.String,
-  })
-  .asReadonly();
+export const newDocumentResponse = documentRt.asReadonly();
 
 /**
  * The new document from template response is
@@ -24,13 +19,7 @@ export const newDocumentResponse = rt
  * https://apidocs.scrive.com/#document
  */
 
-export const newDocumentFromTemplateResponse = rt
-  .Record({
-    id: rt.String,
-    status: rt.Literal('preparation'),
-    title: rt.String,
-  })
-  .asReadonly();
+export const newDocumentFromTemplateResponse = documentRt.asReadonly();
 
 /**
  * The cloned document response is intentially kept
@@ -40,13 +29,7 @@ export const newDocumentFromTemplateResponse = rt
  * https://apidocs.scrive.com/#document
  */
 
-export const clonedDocumentResponse = rt
-  .Record({
-    id: rt.String,
-    status: rt.Literal('preparation'),
-    title: rt.String,
-  })
-  .asReadonly();
+export const clonedDocumentResponse = documentRt.asReadonly();
 
 /**
  * The edit document response is intentially kept
@@ -56,10 +39,4 @@ export const clonedDocumentResponse = rt
  * https://apidocs.scrive.com/#document
  */
 
-export const editDocumentResponse = rt
-  .Record({
-    id: rt.String,
-    status: rt.Literal('preparation'),
-    title: rt.String,
-  })
-  .asReadonly();
+export const editDocumentResponse = documentRt.asReadonly();
