@@ -10,7 +10,8 @@
     "rest-api"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest --coverage src/**/*"
   },
   "repository": "github:cobraz/scrivejs",
   "license": "Apache-2.0",
@@ -23,13 +24,20 @@
     "@bjerk/eslint-config": "^1.0.0",
     "@cobraz/prettier": "^2.0.0",
     "@tsconfig/recommended": "^1.0.1",
+    "@types/jest": "^27.4.0",
+    "@types/node": "16",
     "eslint": "^8.7.0",
+    "form-data": "^4.0.0",
     "jest": "^27.4.7",
+    "nock": "^13.2.4",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.3",
     "typescript": "^4.5.5"
   },
   "dependencies": {
     "node-fetch": "^3.2.0",
     "runtypes": "^6.5.0",
+    "ts-invariant": "^0.9.4",
     "typical-fetch": "^1.4.1"
   }
 }
