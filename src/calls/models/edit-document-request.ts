@@ -1,5 +1,3 @@
-import * as rt from 'runtypes';
-
 export interface SignatoryPlacement {
   /**
    * Position on the x-axis, from 0 to 1.

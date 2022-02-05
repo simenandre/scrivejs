@@ -1,14 +1,14 @@
-import { authenticatedCall } from './common';
 import type { Readable } from 'stream';
-import { withRuntype } from '../utils';
 import FormData from 'form-data';
-import {
-  newDocumentResponse,
-  clonedDocumentResponse,
-  newDocumentFromTemplateResponse,
-  editDocumentResponse,
-} from './models/prepare-responses';
+import { withRuntype } from '../utils';
+import { authenticatedCall } from './common';
 import { EditDocumentRequest } from './models/edit-document-request';
+import {
+  clonedDocumentResponse,
+  editDocumentResponse,
+  newDocumentFromTemplateResponse,
+  newDocumentResponse,
+} from './models/prepare-responses';
 
 export const newDocument = authenticatedCall
   .args<{
