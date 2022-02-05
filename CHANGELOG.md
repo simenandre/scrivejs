@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://www.github.com/cobraz/scrivejs/compare/v1.0.0...v1.1.0) (2022-02-05)
+
+
+### Features
+
+* Add broader document runtype ([#2](https://www.github.com/cobraz/scrivejs/issues/2)) ([2446fba](https://www.github.com/cobraz/scrivejs/commit/2446fba0ad9cb4d57423a48793906c572b245e2e))
+
 ## 1.0.0 (2022-02-05)
 
 
