@@ -7,6 +7,7 @@ import {
   newDocumentFromTemplate,
   updateDocument,
 } from '../prepare';
+import { PersonalAccessCredentialsAuth } from '../../auth';
 
 describe('prepare', () => {
   const base64SmallPDF =
@@ -26,12 +27,12 @@ describe('prepare', () => {
 
   const baseUrl = 'https://scrive.com';
 
-  const credentials = {
+  const auth = new PersonalAccessCredentialsAuth({
     apitoken: 'something',
     accesstoken: 'is-something',
     apisecret: 'when-there-nothing',
     accesssecret: 'here',
-  };
+  });
 
   it('should prepare a simple pdf document', async () => {
     const scope = nock(baseUrl)
@@ -40,7 +41,7 @@ describe('prepare', () => {
 
     const res = await newDocument({
       baseUrl,
-      credentials,
+      auth,
       file: Buffer.from(base64SmallPDF, 'base64'),
     });
 
@@ -63,7 +64,7 @@ describe('prepare', () => {
       .reply(201, response);
     const res = await newDocumentFromTemplate({
       baseUrl,
-      credentials,
+      auth,
       documentId: '100020003000',
     });
 
@@ -86,7 +87,7 @@ describe('prepare', () => {
       .reply(201, response);
     const res = await updateDocument({
       baseUrl,
-      credentials,
+      auth,
       documentId: '100020003000',
       document: {
         title: 'Hello world',
