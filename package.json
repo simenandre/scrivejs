@@ -1,5 +1,5 @@
 {
-  "name": "scrivejs",
+  "name": "scrive-sdk",
   "version": "2.35.9",
   "description": "Typescript-wrapper for Scrive v2 API",
   "keywords": [
