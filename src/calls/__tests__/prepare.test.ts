@@ -58,6 +58,54 @@ describe('prepare', () => {
     scope.done();
   });
 
+  it('should prepare a simple string-based PDF document', async () => {
+    const scope = nock(baseUrl)
+      .post('/api/v2/documents/new')
+      .reply(201, response);
+
+    const res = await newDocument({
+      baseUrl,
+      auth,
+      file: Buffer.from(base64SmallPDF, 'base64').toString('utf-8'),
+    });
+
+    if (res.error) {
+      if (res.error instanceof TypicalWrappedError) {
+        throw res.error.wrappedError;
+      }
+      throw res.error;
+    }
+
+    expect(res.success).toBeTruthy();
+    invariant(res.success);
+    expect(res.body.id).toBe('1000100010001000');
+    scope.done();
+  });
+
+  it('should accept without file, and with saved', async () => {
+    const scope = nock(baseUrl)
+      .post('/api/v2/documents/new')
+      .reply(201, response);
+
+    const res = await newDocument({
+      baseUrl,
+      auth,
+      saved: true,
+    });
+
+    if (res.error) {
+      if (res.error instanceof TypicalWrappedError) {
+        throw res.error.wrappedError;
+      }
+      throw res.error;
+    }
+
+    expect(res.success).toBeTruthy();
+    invariant(res.success);
+    expect(res.body.id).toBe('1000100010001000');
+    scope.done();
+  });
+
   it('should create a new based on a template', async () => {
     const scope = nock(baseUrl)
       .post('/api/v2/documents/newfromtemplate/100020003000')

@@ -1,4 +1,5 @@
 import { Authentication, PersonalAccessCredentialsAuth } from '../auth';
+import { ScriveSdkPrepareClient } from '../clients/prepare-client';
 import { ScriveSdk } from '../main';
 describe('Scrive SDK', () => {
   it('should construct', () => {
@@ -23,5 +24,22 @@ describe('Scrive SDK', () => {
 
     expect(client).toBeInstanceOf(ScriveSdk);
     expect(client.auth).toBeInstanceOf(PersonalAccessCredentialsAuth);
-  })
+  });
+
+  describe('clients', () => {
+    let sdk: ScriveSdk;
+
+    beforeEach(() => {
+      const auth: Authentication = {
+        getHeaders: () => ({}),
+      };
+
+      sdk = new ScriveSdk(auth);
+    });
+
+    it('should return prepare client', () => {
+      const client = sdk.prepare();
+      expect(client).toBeInstanceOf(ScriveSdkPrepareClient);
+    });
+  });
 });
