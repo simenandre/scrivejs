@@ -1,6 +1,6 @@
-import { Authentication, PersonalAccessCredentialsAuth } from '../auth';
-import { ScriveSdkPrepareClient } from '../clients/prepare-client';
-import { ScriveSdk } from '../main';
+import { Authentication, PersonalAccessCredentialsAuth } from '../src/auth';
+import { ScriveSdkPrepareClient } from '../src/clients/prepare-client';
+import { ScriveSdk } from '../src/main';
 describe('Scrive SDK', () => {
   it('should construct', () => {
     const auth: Authentication = {

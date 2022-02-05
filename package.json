@@ -1,7 +1,11 @@
 {
   "name": "scrive-sdk",
-  "version": "2.35.9",
+  "version": "1.0.0",
   "description": "Typescript-wrapper for Scrive API v2",
+  "main": "dist/main.js",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "scrive",
     "document-api",
@@ -12,7 +16,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint . --ext .ts,.tsx",
-    "test": "jest --coverage src/**/*"
+    "test": "jest --coverage test/*.ts"
   },
   "repository": "github:cobraz/scrivejs",
   "license": "Apache-2.0",
@@ -49,5 +53,8 @@
     "runtypes": "^6.5.0",
     "ts-invariant": "^0.9.4",
     "typical-fetch": "^1.4.1"
+  },
+  "engines": {
+    "node": ">=12"
   }
 }

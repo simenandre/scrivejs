@@ -1,4 +1,4 @@
-import { PersonalAccessCredentialsAuth } from '../auth';
+import { PersonalAccessCredentialsAuth } from '../src/auth';
 
 describe('Authentication methods', () => {
   it('should generate headers for personal access credentials', () => {
