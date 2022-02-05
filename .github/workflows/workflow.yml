@@ -22,6 +22,8 @@ jobs:
 
       - run: yarn run build
 
+      - uses: codecov/codecov-action@v2
+
       - uses: GoogleCloudPlatform/release-please-action@v2
         id: release
         with:
