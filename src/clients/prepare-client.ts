@@ -1,6 +1,6 @@
-import { ScriveSdkBase } from './base-client';
-import * as calls from '../calls/prepare';
 import { EditDocumentRequest } from '../calls/models/edit-document-request';
+import * as calls from '../calls/prepare';
+import { ScriveSdkBase } from './base-client';
 
 export class ScriveSdkPrepareClient extends ScriveSdkBase {
   /**

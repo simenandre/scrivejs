@@ -1,6 +1,6 @@
 import { Authentication } from '../src/auth';
-import { ScriveSdkPrepareClient } from '../src/clients/prepare-client';
 import * as calls from '../src/calls/prepare';
+import { ScriveSdkPrepareClient } from '../src/clients/prepare-client';
 
 jest.mock('../src/calls/prepare.ts', () => ({
   newDocument: jest.fn(),

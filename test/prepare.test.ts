@@ -1,13 +1,13 @@
 import nock from 'nock';
 import invariant from 'ts-invariant';
 import { TypicalWrappedError } from 'typical-fetch';
-import { response } from './__fixtures__/new-document-response-data';
+import { PersonalAccessCredentialsAuth } from '../src/auth';
 import {
   newDocument,
   newDocumentFromTemplate,
   updateDocument,
 } from '../src/calls/prepare';
-import { PersonalAccessCredentialsAuth } from '../src/auth';
+import { response } from './__fixtures__/new-document-response-data';
 
 describe('prepare', () => {
   const base64SmallPDF =

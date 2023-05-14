@@ -1,4 +1,3 @@
-import * as rt from 'runtypes';
 import { documentRt } from './document';
 
 /**
