@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/simenandre/scrivejs/compare/v1.1.0...v1.1.1) (2023-05-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency node-fetch to v3.2.10 [security] ([#11](https://github.com/simenandre/scrivejs/issues/11)) ([a14b36b](https://github.com/simenandre/scrivejs/commit/a14b36b9b7eb14806dc63b0dcb3fd01bd40336e0))
+* **deps:** update dependency ts-invariant to ^0.10.0 ([#14](https://github.com/simenandre/scrivejs/issues/14)) ([23284d1](https://github.com/simenandre/scrivejs/commit/23284d1dda722c7d804f6f1a2c9e3064e61cc817))
+
 ## [1.1.0](https://www.github.com/cobraz/scrivejs/compare/v1.0.0...v1.1.0) (2022-02-05)
 
 
