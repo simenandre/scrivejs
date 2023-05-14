@@ -28,7 +28,7 @@
   "dependencies": {
     "node-fetch": "^3.2.0",
     "runtypes": "^6.5.0",
-    "ts-invariant": "^0.9.4",
+    "ts-invariant": "^0.10.0",
     "typical-fetch": "^1.4.1"
   },
   "devDependencies": {
