@@ -28,7 +28,7 @@ jobs:
         env:
           CI: true
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
 
       - uses: google-github-actions/release-please-action@v3
         id: release
