@@ -22,9 +22,6 @@
     "test": "jest --coverage test/*.ts"
   },
   "prettier": "@cobraz/prettier",
-  "eslintConfig": {
-    "extends": "@bjerk/eslint-config"
-  },
   "dependencies": {
     "node-fetch": "^3.2.0",
     "runtypes": "^6.5.0",
